@@ -15,7 +15,7 @@ class Profile(models.Model):
 
     website = models.URLField(max_length=200, blank=True)
     biography = models.TextField(blank=True)
-    phone_numer = models.CharField(max_length=20, blank=True)
+    phone_number = models.CharField(max_length=20, blank=True)
 
     picture = models.ImageField(
         upload_to="users/picture", height_field=None,
