@@ -13,7 +13,7 @@ from users.models import Profile
 from posts.models import Post
 
 # Forms
-from  users.forms import SignupForm, ProfileForm
+from  users.forms import SignupForm
 
 
 class UserDetailView(LoginRequiredMixin,DetailView):
@@ -65,7 +65,7 @@ class UpdateProfileView(LoginRequiredMixin, UpdateView):
 
 class LoginView(auth_views.LoginView):
     """Login view"""
-
+    redirect_authenticated_user = True
     template_name = 'users/login.html'
 
 
